@@ -13,7 +13,7 @@ const projects = [
     thumb:  portfolio_photo,
     color: 'linear-gradient(135deg, #1c2128, #0d1117)',
     accent: '#61dafb',
-    github: 'https://github.com/isha-singh/portfolio',
+    github: 'https://github.com/ishasingh9104-ai/Personal-Portfolio',
     demo: 'https://isha-portfolio.vercel.app',
     status: 'live',
   },
