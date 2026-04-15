@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from '../components/Typewriter';
 import formal_pic from "../assets/formal_pic.jpg";
+
 const typewriterWords = [
-  
-  'Full stack Web  Developer.',
+  'Full stack Web Developer.',
   'Fresher.',
   'UI Builder.',
   'Open to Work ✓',
@@ -30,7 +30,7 @@ export default function Home() {
         padding: '4rem 4rem 4rem 5rem',
         position: 'relative',
         zIndex: 2,
-        borderRight: '1px solid var(--border)',
+        borderRight: '5px solid var(--border)',
       }}>
 
         {/* Status badge */}
@@ -169,7 +169,7 @@ export default function Home() {
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        animation: 'fadeIn 0.9s 0.3s both',
+        animation: 'fadeIn 0.3s 0.3s both',
       }}>
 
         {/* BIG NAME WATERMARK behind photo */}
@@ -204,7 +204,7 @@ export default function Home() {
             linear-gradient(rgba(88,166,255,0.03) 1px, transparent 1px),
             linear-gradient(90deg, rgba(88,166,255,0.03) 1px, transparent 1px)
           `,
-          backgroundSize: '40px 40px',
+          backgroundSize: '700px 700px',
         }} />
 
         {/* Photo area */}
@@ -214,51 +214,85 @@ export default function Home() {
           display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem',
         }}>
 
-          {/* Photo frame */}
+          {/* Photo frame with ENHANCED merging and MIRROR reflection */}
           <div style={{
-            width: '100%', aspectRatio: '3/4',
-            borderRadius: '16px',
-            border: '2px solid rgba(88,166,255,0.2)',
-            overflow: 'hidden',
-            background: 'linear-gradient(135deg, #1c2128, #161b22)',
+            width: '550px', aspectRatio: '3/4',
+            borderRadius: '90px',
+            border: '1px solid rgba(88,166,255,0.2)',
+            overflow: 'visible', // Modified to allow reflection outside the frame
             position: 'relative',
-            boxShadow: '0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(88,166,255,0.1)',
           }}>
-           <img 
-            src={formal_pic} 
-            alt="Isha Singh"
-            style={{ 
-            width: '100%', 
-            height: '100%', 
-            objectFit: 'cover'
-         }} 
-/>
+            {/* Inner clipping container for main photo */}
+            <div style={{
+              width: '100%', height: '100%',
+              borderRadius: '90px',
+              overflow: 'hidden',
+              background: 'linear-gradient(135deg, #1c2128, #161b22)',
+              position: 'relative',
+              boxShadow: '10px 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(88,166,255,0.1)',
+            }}>
+              <img
+                src={formal_pic}
+                alt="Isha Singh"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: 2, // Merges with background gradient
+                }}
+              />
+            </div>
+
+            {/* Reflection Container */}
+            <div style={{
+              position: 'absolute',
+              top: '100%',
+              left: 0,
+              width: '100%',
+              height: '35%', // Length of the reflection
+              marginTop: '5px', // Gap before reflection starts
+              maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 10%, transparent 90%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 10%, transparent 90%)',
+            }}>
+              <img
+                src={formal_pic}
+                alt="Reflection"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  transform: 'scaleY(-1)', // Flip vertically
+                  filter: 'blur(10px) brightness(0.8)', // Blur and darken for realism
+                  opacity: 0.8,
+                }}
+              />
+            </div>
 
             {/* Corner accent */}
             <div style={{
               position: 'absolute', top: 0, right: 0,
               width: '40px', height: '40px',
-              borderTop: '2px solid var(--blue)', borderRight: '2px solid var(--blue)',
+              borderTop: '6px solid var(--blue)', borderRight: '12px solid var(--blue)',
               borderRadius: '0 16px 0 0',
             }} />
             <div style={{
               position: 'absolute', bottom: 0, left: 0,
               width: '40px', height: '40px',
-              borderBottom: '2px solid var(--blue)', borderLeft: '2px solid var(--blue)',
+              borderBottom: '6px solid var(--blue)', borderLeft: '12px solid var(--blue)',
               borderRadius: '0 0 0 16px',
             }} />
           </div>
 
           {/* Name tag below photo */}
           <div style={{
-            fontFamily: 'var(--font-mono)', fontSize: '0.75rem',
+            fontFamily: 'var(--font-mono)', fontSize: '1.15rem',
             color: 'var(--white3)', textAlign: 'center',
             background: 'rgba(88,166,255,0.06)',
             border: '1px solid rgba(88,166,255,0.15)',
             borderRadius: '8px', padding: '0.5rem 1rem',
           }}>
             <span style={{ color: 'var(--blue)' }}>@isha_singh</span>
-            <span style={{ color: 'var(--white4)' }}> · frontend dev</span>
+            <span style={{ color: 'var(--white)' }}> · frontend dev</span>
           </div>
         </div>
 
