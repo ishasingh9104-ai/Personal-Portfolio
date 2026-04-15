@@ -14,7 +14,7 @@ const projects = [
     color: 'linear-gradient(135deg, #1c2128, #0d1117)',
     accent: '#61dafb',
     github: 'https://github.com/ishasingh9104-ai/Personal-Portfolio',
-    demo: 'https://isha-portfolio.vercel.app',
+    demo: 'https://personal-portfolio-sigma-fawn.vercel.app/',
     status: 'live',
   },
   {
