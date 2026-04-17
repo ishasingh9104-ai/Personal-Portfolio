@@ -6,7 +6,7 @@ const navItems = [
   { path: '/about',       label: 'About',        icon: '👤' },
   { path: '/skills',      label: 'Skills',       icon: '⚡' },
   { path: '/projects',    label: 'Projects',     icon: '🚀' },
-  { path: '/certificates',label: 'Certs',        icon: '📜' },
+  { path: '/certificates',label: 'Certificates', icon: '📜' },
   { path: '/resume',      label: 'Resume',       icon: '📄' },
 ];
 
