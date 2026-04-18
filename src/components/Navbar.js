@@ -15,11 +15,19 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', fn, { passive: true });
-    return () => window.removeEventListener('scroll', fn);
-  }, []);
+ useEffect(() => {
+  const fn = () => {
+    const scrollTop =
+      document.documentElement.scrollTop ||
+      window.pageYOffset;
+
+    setScrolled(scrollTop > 40);
+  };
+
+  document.addEventListener('scroll', fn);
+
+  return () => document.removeEventListener('scroll', fn);
+}, []);
 
   useEffect(() => setMobileOpen(false), [location.pathname]);
 

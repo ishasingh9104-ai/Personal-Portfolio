@@ -32,7 +32,7 @@ export default function Typewriter({ words = [], speed = 90, deleteSpeed = 100, 
         display: 'inline-block', width: '2px', height: '1em',
         background: cursorColor, marginLeft: '2px',
         verticalAlign: 'text-bottom',
-        animation: 'pulse 2s step-end infinite',
+        animation: 'pulse 5s step-end infinite',
       }} />
     </span>
   );

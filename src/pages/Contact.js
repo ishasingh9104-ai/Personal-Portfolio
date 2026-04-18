@@ -43,7 +43,7 @@ export default function Contact() {
               <Line num="11">{kw('function ')} {prop('hire')}{br('(isha) {')} </Line>
               <Line num="12">&nbsp;&nbsp;{kw('return ')} {prop('isha')}{br('.')}{prop('buildAwesome')} {br('(')} </Line>
               <Line num="13">&nbsp;&nbsp;&nbsp;&nbsp;{str('"your project"')}</Line>
-              <Line num="14">&nbsp;&nbsp;{br(');')}</Line>
+              <Line num="14">&nbsp;&nbsp;{br(');')}</Line> // not breaking space 
               <Line num="15">{br('}')} </Line>
             </CodeBlock>
           </RevealCard>
@@ -97,7 +97,8 @@ export default function Contact() {
                 borderRadius: '10px', fontFamily: 'var(--font-mono)', fontSize: '0.78rem',
                 color: 'var(--green)', textAlign: 'center',
               }}>
-                ● Currently open to internships &amp; junior roles
+                ● Currently open to internships &amp; junior roles // short form of and 
+                
               </div>
             </div>
           </RevealCard>

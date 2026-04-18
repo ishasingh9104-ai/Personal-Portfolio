@@ -82,7 +82,7 @@ export default function Resume() {
 
                 {/* DOWNLOAD BUTTON */}
                 {/*
-                  ✅ HOW TO USE:
+                 
                   1. Place "Isha_Singh_Resume.pdf" in the /public folder.
                   2. The link below will trigger the download.
                 */}
