@@ -37,6 +37,13 @@ const certs = [
     skills: ['React' ,'Components','State','Props'],
     icon: '⚛️', color: '#61dafb', badge: '#61dafb',
   },
+  {
+    id: 5, title: 'Bootstrap',
+    org: 'ITVedant Institute', year: '2026',
+    desc: 'Mastered Bootstrap, a popular CSS framework for building responsive and mobile-first websites, including grid system, components, and utilities.',
+    skills: ['Bootstrap','CSS Framework','Responsive Design'],
+    icon: '🔧', color: '#563d7c', badge: '#563d7c',
+  },
 ];
 
 export default function Certificates() {

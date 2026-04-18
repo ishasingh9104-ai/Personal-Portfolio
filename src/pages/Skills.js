@@ -8,6 +8,7 @@ const skills = [
   { name: 'React',      icon: '⚛️', level: 72, color: '#61dafb', desc: 'Components · Hooks · State · Props' },
   { name: 'Java',       icon: '☕', level: 68, color: '#b07219', desc: 'OOP · Classes · Problem Solving' },
   { name: 'MySQL',      icon: '🗄️', level: 65, color: '#00758f', desc: 'Queries · Joins · Database Design' },
+  { name: 'Bootstrap',  icon: '🔧', level: 70, color: '#563d7c', desc: 'CSS Framework · Responsive Design' },
 ];
 
 export default function Skills() {
