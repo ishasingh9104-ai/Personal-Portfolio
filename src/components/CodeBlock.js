@@ -6,7 +6,7 @@ export function CodeBlock({ children, filename = 'isha.ts', style = {} }) {
     <div style={{
       background: '#1e1e2e', // Dark background color
       borderRadius: '12px', // Rounded corners
-      overflow: 'hidden', // Prevent content overflow
+      overflow: 'auto', // Prevent content overflow
       border: '1px solid rgba(88,166,255,0.15)', // Light border
       boxShadow: '0 24px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.03)', // Shadow for depth
       fontFamily: 'var(--font-mono)', // Monospace font for code look
